@@ -2,6 +2,10 @@
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Noto Serif', serif; */
 
 :root {
   /* change the values below to your colors from your palette  https://coolors.co/5c9ead-ffffff-326273-eeeeee-e39774*/
@@ -12,8 +16,8 @@ Fonts are separated by a | */
   --accent3-color: #e39774;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: "IM Fell French Canon SC";
-  --paragraph-font: Lato, Helvetica, sans-serif;
+  --heading-font: 'Inter';
+  --paragraph-font: 'Noto Serif';
 
   /* these colors below should be chosen from among your palette colors above */
   --headline-color-on-white: #5c9ead;  /* headlines on a white background */ 
