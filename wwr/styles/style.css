@@ -278,4 +278,130 @@ main section img {
         margin-top: 25px;
     }
 }
-            
+
+/* RIVER PAGE */
+
+.river-logo {
+    background-image: linear-gradient(to right bottom, rgba(250,245,228,0.6), rgba(18,91,80, 0.6)),
+    url(../images/river-title.JPG);
+    background-size: cover;
+    height: 300px;
+    margin-top: 0;
+}
+
+.river-title {
+    text-align: center;
+    padding-top: 6rem;
+    letter-spacing: 1.5rem;
+    font-size: 4rem;
+    margin: 0px;
+    font-family: var(--heading-font);
+}
+
+
+.section-about {
+    font-size: 1.4rem;
+    padding: .5rem;
+    text-align: justify;
+    font-family: var(--paragraph-font);
+    margin-top: 10rem;
+}
+
+.row {
+    display: inline-grid;
+    grid-template-columns: repeat(7,1fr);
+    column-gap: 4rem;
+}
+
+.col-paragraph-front {
+    grid-column: 4 / 8;
+}
+
+.col-paragraph-back {
+    grid-column: 1 / 5;
+}
+
+.col-pictures-front {
+    grid-column: 1/4;
+}
+
+.col-pictures-back {
+    grid-column: 5/8;
+}
+.composition{
+    position: relative;
+}
+
+
+.p1 {
+    left: 0;
+    top: 0rem; 
+}
+
+.p2 {
+    right: 0;
+    top: 1.6rem; 
+}
+
+.p3 {
+    left: 7%;
+    top: 6rem; 
+}
+
+.photo {
+    width: 75%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 4px;
+}
+
+.photo:hover {
+    outline: .5rem solid var(--headline-color-on-color);
+    transform: scale(1.05) translateY(-.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0,0,0, .5);
+    z-index: 20;
+}
+
+.composition:hover .photo:not(:hover) {
+       transform: scale(.95);
+   }
+
+.heading-secondary {
+    text-align: center;
+    letter-spacing: 6px;
+    margin-bottom: 5rem;
+    font-family: var(--heading-font);
+}
+
+@media screen and (max-width: 900px){
+    .row {
+        display: block;
+    }
+
+.composition {
+    position: static;
+    text-align: center;
+}
+
+.photo {
+    width: 85%;
+    box-shadow: none;
+    border-radius: 2px;
+    position: static;
+}
+
+.photo:hover {
+    transform: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.composition:hover .photo:not(:hover) {
+       transform: none;
+   }
+
+
+}
