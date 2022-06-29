@@ -1,0 +1,47 @@
+.title {
+    padding-bottom: 3rem;
+    &_date {
+        padding-bottom: 2rem;
+    }
+}
+
+.instance {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    height: 40rem;
+    overflow: hidden;
+    background-color: rgba($color-gray, .75);
+    margin: 5rem;
+    border-radius: 5px;
+    &_image {
+        margin: auto;
+        height: 41rem;
+        &-img {
+            max-height: 100%;
+            object-fit: scale-down;
+     }
+    }
+    &_comments {
+        overflow: scroll;
+        padding: 1rem;
+        height: 39rem;
+        background-color: rgba($color-white, .75);
+    }
+    &_content {
+        padding: 3rem;
+    }
+    &_paragraph {
+        overflow: scroll;
+        font-size: $font-size-regular;
+        display: inline-block;
+        height: 30rem;
+        scrollbar-width: none;
+    }
+    &_heading {
+        font-size: $font-size-leadtext;
+    }
+    &_author {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+}

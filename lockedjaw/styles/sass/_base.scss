@@ -27,6 +27,23 @@ h1, h2, h3, h4 {
     font-family: $font-heading;
 }
 
+h1 {
+    font-size: $font-size-heading;
+}
+
+h2 {
+    font-size: $font-size-subheading;
+}
+
+h3 {
+    font-size: $font-size-leadtext;
+    padding-bottom: 1rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
 .container {
     max-width: 120rem;
     margin: 0 auto 0 auto;
@@ -34,7 +51,7 @@ h1, h2, h3, h4 {
 
 .header {
     background-color: $color-blue;
-    font-size: 2rem;
+    font-size: $font-size-regular;
     display: grid;
     grid-column: full-start / full-end;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -105,5 +122,62 @@ h1, h2, h3, h4 {
         & p {
             text-align: center;
         }
+    }
+}
+
+.btn {
+     &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $font-size-regular;
+        border: none;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+    
+
+    &-blue {
+        background-color: $color-blue;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-blue;
+        }
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &-animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
     }
 }

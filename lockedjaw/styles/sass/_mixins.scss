@@ -1,0 +1,19 @@
+@mixin background-text ($first-color, $second-color) {
+    -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, 
+            rgba($first-color, .85), 
+            rgba($second-color, .85));
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
