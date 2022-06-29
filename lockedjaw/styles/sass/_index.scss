@@ -1,0 +1,82 @@
+.intro {
+    height: 85vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-cadet-blue, 0.6),
+        rgba($color-blue, 0.6)),
+    url(../images/tablephone.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    &_textbox {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: $font-heading;
+    }
+    &_heading {
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+    }
+    &_subheading {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 1.4rem;
+    }
+}
+
+.first {
+    font-size: 2rem;
+    margin: 13rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    &_content{
+        background-color: rgba($color-white, 0.5);
+        padding: 2rem;
+        border-radius: .4rem;
+        box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+    }
+    & h2 {
+        margin-bottom: 1.6rem;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, 
+            rgba($color-cadet-blue, .85), 
+            rgba($color-blue, .85));
+    }
+}
+
+.cards {
+    height: 80vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-cadet-blue, 0.6),
+        rgba($color-blue, 0.6)),
+    url(../images/bedcomp.jpg);
+    background-size: cover;
+    background-position: top;
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+    &_content {
+        width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .45);
+    padding: 3rem;
+    padding-left: 9rem;
+    font-size: 1.8rem;
+    transform: skewX(-12deg);
+    & h1, p {
+        transform: skewX(12deg);
+    }
+    }
+    
+}

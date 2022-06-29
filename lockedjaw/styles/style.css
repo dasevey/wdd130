@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #eeeeee, #8d99ae);
+  background-repeat: no-repeat;
+  font-family: "Noto Serif", serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto 0 auto;
+}
+
+.header {
+  background-color: #326273;
+  font-size: 2rem;
+  display: grid;
+  grid-column: full-start/full-end;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.header_logo-box {
+  margin: 1rem;
+}
+.header_logo {
+  width: 5rem;
+  display: inline;
+}
+.header_navbar {
+  margin-left: auto;
+  margin-right: 0;
+  display: grid;
+  grid-gap: 2rem;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+.header_navbar_list {
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.header_navbar_item {
+  float: left;
+}
+.header_navbar_link:link, .header_navbar_link:visited {
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  display: block;
+  transition: all 0.2s;
+}
+.header_navbar_link:hover, .header_navbar_link:active {
+  color: #e39774;
+  transform: translateY(-3px);
+}
+.header_navbar_link:active {
+  transform: translate(0px);
+}
+
+.footer {
+  background-color: #326273;
+  font-size: 2rem;
+  display: grid;
+  grid-column: full-start/full-end;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  padding: 5rem 6rem 6rem 6rem;
+  text-align: center;
+}
+.footer_contact {
+  font-size: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+}
+.footer_contact a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer_contact a:hover {
+  text-decoration: underline;
+}
+.footer_contact p {
+  text-align: center;
+}
+
+.intro {
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, rgba(92, 158, 173, 0.6), rgba(50, 98, 115, 0.6)), url(../images/tablephone.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.intro_textbox {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+.intro_heading {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 2rem;
+}
+.intro_subheading {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1.4rem;
+}
+
+.first {
+  font-size: 2rem;
+  margin: 13rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.first_content {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+.first h2 {
+  margin-bottom: 1.6rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, rgba(92, 158, 173, 0.85), rgba(50, 98, 115, 0.85));
+}
+
+.cards {
+  height: 80vh;
+  background-image: linear-gradient(to right bottom, rgba(92, 158, 173, 0.6), rgba(50, 98, 115, 0.6)), url(../images/bedcomp.jpg);
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cards_content {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 3rem;
+  padding-left: 9rem;
+  font-size: 1.8rem;
+  transform: skewX(-12deg);
+}
+.cards_content h1, .cards_content p {
+  transform: skewX(12deg);
+}
+
+.create {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 53%), url(../images/redphone.jpg);
+  background-size: 100%;
+  padding: 5rem 0 0 5rem;
+}
+.create_heading {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.form_group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form_input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(141, 153, 174, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 40%;
+  display: block;
+  transition: all 0.3s;
+}
+.form_input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #326273;
+}
+.form_input:focus:invalid {
+  border-bottom: 3px solid #5c9ead;
+}
+.form_input::-webkit-input-placeholder {
+  color: #8d99ae;
+}
+.form_label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+.form_input:placeholder-shown + .form_label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+/*# sourceMappingURL=style.css.map */

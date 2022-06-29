@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// font-family: 'Inter', sans-serif;
+// font-family: 'Noto Serif', serif;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+}
+
+body {
+    background-image: linear-gradient(to right bottom, $color-off-white, $color-gray);
+    background-repeat: no-repeat;
+    font-family: $font-body;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-heading;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+
+.header {
+    background-color: $color-blue;
+    font-size: 2rem;
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    &_logo-box {
+        margin: 1rem;
+    }
+    &_logo {
+        width: 5rem;
+        display: inline;
+    }
+    &_navbar {
+        margin-left: auto;
+        margin-right: 0;
+        display: grid;
+        grid-gap: 2rem;
+        align-items: center;
+        font-family: $font-heading;
+        &_list {
+            list-style: none;
+
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        }
+        &_item {
+            float: left;
+        }
+        &_link:link,
+        &_link:visited {
+        font-size: 2rem;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+        transition: all .2s;
+    }
+    &_link:hover,
+    &_link:active {
+        color: $color-orange;
+        transform: translateY(-3px);
+    }
+    &_link:active {
+        transform: translate(0px);
+    }
+}
+}
+
+.footer {
+    background-color: $color-blue;
+    font-size: 2rem;
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    padding: 5rem 6rem 6rem 6rem;
+    text-align: center;
+    &_contact {
+        font-size: 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        display: block;
+        & a {
+            text-decoration: none;
+            color: $color-white;
+        }
+        & a:hover {
+            text-decoration: underline;
+        }
+        & p {
+            text-align: center;
+        }
+    }
+}
