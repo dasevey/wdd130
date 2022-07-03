@@ -36,6 +36,10 @@
         display: inline-block;
         height: 30rem;
         scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    &_paragraph::-webkit-scrollbar {
+        display: none;
     }
     &_heading {
         font-size: $font-size-leadtext;

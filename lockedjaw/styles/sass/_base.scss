@@ -107,23 +107,19 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     padding: 5rem 6rem 6rem 6rem;
     text-align: center;
-    &_contact {
+    &_link {
         font-size: 2rem;
         color: $color-white;
         text-transform: uppercase;
         display: block;
-        & a {
-            text-decoration: none;
-            color: $color-white;
-        }
-        & a:hover {
+        text-decoration: none;
+        color: $color-white;
+        &:hover {
             text-decoration: underline;
         }
-        & p {
-            text-align: center;
         }
     }
-}
+
 
 .btn {
      &,

@@ -110,21 +110,16 @@ p {
   padding: 5rem 6rem 6rem 6rem;
   text-align: center;
 }
-.footer_contact {
+.footer_link {
   font-size: 2rem;
   color: #ffffff;
   text-transform: uppercase;
   display: block;
-}
-.footer_contact a {
   text-decoration: none;
   color: #ffffff;
 }
-.footer_contact a:hover {
+.footer_link:hover {
   text-decoration: underline;
-}
-.footer_contact p {
-  text-align: center;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -282,6 +277,10 @@ p {
   display: inline-block;
   height: 30rem;
   scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.instance_paragraph::-webkit-scrollbar {
+  display: none;
 }
 .instance_heading {
   font-size: 2.5rem;
