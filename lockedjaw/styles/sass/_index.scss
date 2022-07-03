@@ -25,6 +25,20 @@
         font-weight: 600;
         letter-spacing: 1.4rem;
     }
+    @include responsive(phone){
+        height: 50vh;
+        overflow: hidden;
+        &_textbox{
+            width: 100%;
+            top: 15%;
+        }
+        &_heading{
+            letter-spacing: 1rem;
+        }
+        &_subheading {
+            letter-spacing: .5rem;
+        }
+    }
 }
 
 .first {
@@ -43,6 +57,13 @@
     }
     & h3 {
         @include background-text($color-cadet-blue, $color-blue);
+    }
+    @include responsive(phone){
+        display: block;
+        margin: 0;
+        &_content {
+            margin: 2rem;
+        }
     }
 }
 
@@ -74,6 +95,21 @@
         transform: translateX(-10px) skewX(12deg);
         @include background-text($color-blue, $color-black);
     }
+    }
+    @include responsive (phone){
+        &_content {
+            transform: skewX(0);
+            width: 85%;
+            overflow: hidden;
+            padding: 2rem;
+            & p {
+                transform: skewX(0);
+                white-space: wrap;
+            }
+            & h3 {
+                transform: skewX(0);
+            }
+        }
     }
     
 }
