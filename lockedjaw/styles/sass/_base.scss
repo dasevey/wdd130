@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 // font-family: 'Inter', sans-serif;
 // font-family: 'Noto Serif', serif;
@@ -7,195 +7,202 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
-
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 }
 
 body {
-    background-image: linear-gradient(to right bottom, $color-off-white, $color-gray);
-    background-repeat: no-repeat;
-    font-family: $font-body;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-off-white,
+    $color-gray
+  );
+  background-repeat: no-repeat;
+  font-family: $font-body;
 }
 
-h1, h2, h3, h4 {
-    font-family: $font-heading;
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-heading;
 }
 
 h1 {
-    font-size: $font-size-heading;
-    @include responsive (phone) {
-        font-size: 3.5rem;
-    }
+  font-size: $font-size-heading;
+  @include responsive(phone) {
+    font-size: 3.5rem;
+  }
 }
 
 h2 {
-    font-size: $font-size-subheading;
-    @include responsive (phone) {
-        font-size: $font-size-regular;
-    }
+  font-size: $font-size-subheading;
+  @include responsive(phone) {
+    font-size: $font-size-regular;
+  }
 }
 
 h3 {
-    font-size: $font-size-leadtext;
-    padding-bottom: 1rem;
+  font-size: $font-size-leadtext;
+  padding-bottom: 1rem;
 }
 
 p {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .container {
-    max-width: 120rem;
-    margin: 0 auto 0 auto;
+  max-width: 120rem;
+  margin: 0 auto 0 auto;
 }
 
 .header {
-    background-color: $color-blue;
-    font-size: $font-size-regular;
+  background-color: $color-blue;
+  font-size: $font-size-regular;
+  display: grid;
+  grid-column: full-start / full-end;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  &_logo-box {
+    margin: 1rem;
+  }
+  &_logo {
+    width: 5rem;
+    display: inline;
+  }
+  &_navbar {
+    margin-left: auto;
+    margin-right: 0;
     display: grid;
-    grid-column: full-start / full-end;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    &_logo-box {
-        margin: 1rem;
-    }
-    &_logo {
-        width: 5rem;
-        display: inline;
-    }
-    &_navbar {
-        margin-left: auto;
-        margin-right: 0;
-        display: grid;
-        grid-gap: 2rem;
-        align-items: center;
-        font-family: $font-heading;
-        &_list {
-            list-style: none;
+    grid-gap: 2rem;
+    align-items: center;
+    font-family: $font-heading;
+    &_list {
+      list-style: none;
 
-            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        }
-        &_item {
-            float: left;
-        }
-        &_link:link,
-        &_link:visited {
-        font-size: 2rem;
-        color: $color-white;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 1.5rem;
-        display: block;
-        transition: all .2s;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+    &_item {
+      float: left;
+    }
+    &_link:link,
+    &_link:visited {
+      font-size: 2rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+      display: block;
+      transition: all 0.2s;
     }
     &_link:hover,
     &_link:active {
-        color: $color-orange;
-        transform: translateY(-3px);
+      color: $color-orange;
+      transform: translateY(-3px);
     }
     &_link:active {
-        transform: translate(0px);
+      transform: translate(0px);
     }
-}
-    @include responsive(phone){
-        grid-template-columns: 1fr 1fr;
-        &_navbar {
-            margin: 0 auto;
-            grid-row: 2;
-            grid-column: 1 / span 3;
-        }
+  }
+  @include responsive(phone) {
+    grid-template-columns: 1fr 1fr;
+    &_navbar {
+      margin: 0 auto;
+      grid-row: 2;
+      grid-column: 1 / span 3;
     }
+  }
 }
-
 
 .footer {
-    background-color: $color-blue;
+  background-color: $color-blue;
+  font-size: 2rem;
+  display: grid;
+  grid-column: full-start / full-end;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  padding: 5rem 6rem 6rem 6rem;
+  text-align: center;
+  &_copyright {
+    bottom: 0;
+  }
+  &_link {
     font-size: 2rem;
-    display: grid;
-    grid-column: full-start / full-end;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-    padding: 5rem 6rem 6rem 6rem;
-    text-align: center;
-    &_link {
-        font-size: 2rem;
-        color: $color-white;
-        text-transform: uppercase;
-        display: block;
-        text-decoration: none;
-        color: $color-white;
-        &:hover {
-            text-decoration: underline;
-        }
-        }
-        @include responsive(phone){
-            display: block;
-            padding: 5rem 0;
-        }
-        &_link {
-            margin-top: 3rem;
-        }
+    color: $color-white;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    color: $color-white;
+    margin: 0;
+    &:hover {
+      text-decoration: underline;
     }
-
+  }
+  @include responsive(phone) {
+    display: block;
+    padding: 5rem 0;
+    &_link {
+      margin-top: 5rem;
+    }
+  }
+}
 
 .btn {
-     &,
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s;
-        position: relative;
-        font-size: $font-size-regular;
-        border: none;
-        cursor: pointer;
-    }
-    
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
-    }
-    
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-    }
-    
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: $font-size-regular;
+    border: none;
+    cursor: pointer;
+  }
 
-    &-blue {
-        background-color: $color-blue;
-        color: $color-white;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
 
-        &::after {
-            background-color: $color-blue;
-        }
-    }
-    
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &-blue {
+    background-color: $color-blue;
+    color: $color-white;
+
     &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
+      background-color: $color-blue;
     }
-    
-    &-animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }

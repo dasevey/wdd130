@@ -1,115 +1,117 @@
 .intro {
-    height: 85vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-cadet-blue, 0.6),
-        rgba($color-blue, 0.6)),
+  height: 85vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-cadet-blue, 0.6),
+      rgba($color-blue, 0.6)
+    ),
     url(../images/tablephone.jpg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  &_textbox {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  &_heading {
+    font-weight: 400;
+    letter-spacing: 2rem;
+  }
+  &_subheading {
+    font-weight: 600;
+    letter-spacing: 1.4rem;
+  }
+  @include responsive(phone) {
+    height: 50vh;
+    overflow: hidden;
     &_textbox {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: $color-white;
-        text-transform: uppercase;
+      width: 100%;
+      top: 15%;
     }
     &_heading {
-        font-weight: 400;
-        letter-spacing: 2rem;
+      letter-spacing: 1rem;
     }
     &_subheading {
-        font-weight: 600;
-        letter-spacing: 1.4rem;
+      letter-spacing: 0.5rem;
     }
-    @include responsive(phone){
-        height: 50vh;
-        overflow: hidden;
-        &_textbox{
-            width: 100%;
-            top: 15%;
-        }
-        &_heading{
-            letter-spacing: 1rem;
-        }
-        &_subheading {
-            letter-spacing: .5rem;
-        }
-    }
+  }
 }
 
 .first {
-    margin: 13rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    &_content{
-        background-image: linear-gradient(
-        to right bottom,
-        rgba($color-dirty-white, 0.8),
-        rgba($color-cadet-blue, 0.3));
-        padding: 2rem;
-        border-radius: .4rem;
-        box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+  margin: 13rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  &_content {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-dirty-white, 0.8),
+      rgba($color-cadet-blue, 0.3)
+    );
+    padding: 2rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  }
+  & h3 {
+    @include background-text($color-cadet-blue, $color-blue);
+  }
+  @include responsive(phone) {
+    display: block;
+    margin: 0;
+    &_content {
+      margin: 2rem;
     }
-    & h3 {
-        @include background-text($color-cadet-blue, $color-blue);
-    }
-    @include responsive(phone){
-        display: block;
-        margin: 0;
-        &_content {
-            margin: 2rem;
-        }
-    }
+  }
 }
 
 .cards {
-    height: 80vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-cadet-blue, 0.6),
-        rgba($color-blue, 0.6)),
+  height: 80vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-cadet-blue, 0.6),
+      rgba($color-blue, 0.6)
+    ),
     url(../images/bedcomp.jpg);
-    background-size: cover;
-    background-position: top;
-    display: flex;
+  background-size: cover;
+  background-position: top;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-    &_content {
-        width: 75%;
+  &_content {
+    width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .45);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.45);
     padding: 3rem;
     padding-left: 9rem;
     transform: skewX(-12deg);
     & p {
-        transform: skewX(12deg);
+      transform: skewX(12deg);
     }
     & h3 {
-        transform: translateX(-10px) skewX(12deg);
-        @include background-text($color-blue, $color-black);
+      transform: translateX(-10px) skewX(12deg);
+      @include background-text($color-blue, $color-black);
     }
+  }
+  @include responsive(phone) {
+    &_content {
+      transform: skewX(0);
+      width: 85%;
+      overflow: hidden;
+      padding: 2rem;
+      & p {
+        transform: skewX(0);
+        white-space: wrap;
+      }
+      & h3 {
+        transform: skewX(0);
+      }
     }
-    @include responsive (phone){
-        &_content {
-            transform: skewX(0);
-            width: 85%;
-            overflow: hidden;
-            padding: 2rem;
-            & p {
-                transform: skewX(0);
-                white-space: wrap;
-            }
-            & h3 {
-                transform: skewX(0);
-            }
-        }
-    }
-    
+  }
 }

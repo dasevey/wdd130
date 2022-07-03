@@ -28,7 +28,10 @@ body {
   font-family: "Noto Serif", serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Inter", sans-serif;
 }
 
@@ -130,6 +133,9 @@ p {
   padding: 5rem 6rem 6rem 6rem;
   text-align: center;
 }
+.footer_copyright {
+  bottom: 0;
+}
 .footer_link {
   font-size: 2rem;
   color: #ffffff;
@@ -137,6 +143,7 @@ p {
   display: block;
   text-decoration: none;
   color: #ffffff;
+  margin: 0;
 }
 .footer_link:hover {
   text-decoration: underline;
@@ -146,9 +153,9 @@ p {
     display: block;
     padding: 5rem 0;
   }
-}
-.footer_link {
-  margin-top: 3rem;
+  .footer_link {
+    margin-top: 5rem;
+  }
 }
 
 .btn, .btn:link, .btn:visited {
@@ -337,6 +344,9 @@ p {
   height: 39rem;
   background-color: rgba(255, 255, 255, 0.75);
 }
+.instance_comments h4 {
+  font-size: 2rem;
+}
 .instance_content {
   padding: 3rem;
 }
@@ -357,6 +367,16 @@ p {
 .instance_author {
   font-size: 1.3rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 650px) {
+  .instance {
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+  .instance_content, .instance_comments {
+    text-align: left;
+  }
 }
 
 .title {
@@ -390,6 +410,21 @@ p {
 .title p {
   margin: auto;
 }
+@media only screen and (max-width: 650px) {
+  .title_content {
+    display: block;
+    padding: 2rem;
+  }
+  .title_image {
+    width: 95%;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .title_shape {
+    margin: 0 auto;
+    border-radius: 0;
+  }
+}
 
 .create {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 53%), url(../images/redphone.jpg);
@@ -403,6 +438,15 @@ p {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, rgba(92, 158, 173, 0.85), rgba(50, 98, 115, 0.85));
+}
+@media only screen and (max-width: 650px) {
+  .create {
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(238, 238, 238, 0.8)), url(../images/redphone.jpg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    padding: 5rem 0 0 0;
+  }
 }
 
 .form {
@@ -460,6 +504,20 @@ p {
 .form_check-label {
   display: inline;
   font-size: 1.8rem;
+}
+@media only screen and (max-width: 650px) {
+  .form {
+    text-align: center;
+  }
+  .form_input {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .form_buttons {
+    padding: 0;
+    padding: 3rem 0;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
