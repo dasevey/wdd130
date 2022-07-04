@@ -13,6 +13,11 @@
   background-color: rgba($color-gray, 0.75);
   margin: 5rem;
   border-radius: 5px;
+  &_photo-info {
+    text-decoration: underline;
+    font-size: 1.3rem;
+    display: block;
+  }
   &_image {
     margin: auto;
     height: 41rem;
@@ -28,7 +33,15 @@
     background-color: rgba($color-white, 0.75);
     & h4 {
       font-size: 2rem;
+      margin-top: 1.5rem;
     }
+  }
+  &_date, &_time {
+    font-size: 1.4rem;
+    color: $color-dark-gray;
+  }
+  &_time {
+    font-style: italic;
   }
   &_content {
     padding: 3rem;
@@ -51,13 +64,20 @@
     font-size: 1.3rem;
     font-weight: 700;
   }
-  @include responsive(phone) {
+  @include responsive(tablet) {
     display: block;
     height: auto;
     text-align: center;
     &_content,
     &_comments {
       text-align: left;
+    }
+    &_image {
+        height: auto;
+        &-img {
+            max-height: auto;
+            width: 100%;
+        }
     }
   }
 }
