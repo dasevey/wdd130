@@ -65,14 +65,79 @@ p {
   background-color: $color-blue;
   font-size: $font-size-regular;
   display: grid;
-  grid-column: full-start / full-end;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   &_logo-box {
     margin: 1rem;
   }
   &_logo {
     width: 5rem;
     display: inline;
+  }
+
+  &_search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    &-input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: $color-off-white;
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 80%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:hover {
+          border: solid 2px $color-orange;
+        }
+  
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: $color-dirty-white;
+        }
+  
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $color-dirty-white;
+        }
+    }
+  
+    &-input:focus + &-button {
+        background-color: $color-dirty-white;
+    }
+    
+    &-button {
+      border: none;
+      background-color: $color-off-white;
+      
+      &:focus {
+        outline: none;
+      }
+      
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+    
+    &-icon {
+      height: 2rem;
+      width: 2rem;
+      fill: $color-gray;
+      &:hover {
+        fill: $color-orange;
+      }
+    }
+
   }
   &_navbar {
     margin-left: auto;
@@ -110,7 +175,7 @@ p {
     }
   }
   @include responsive(phone) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 25% 75%;
     &_navbar {
       margin: 0 auto;
       grid-row: 2;
